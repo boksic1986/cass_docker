@@ -1,0 +1,17 @@
+# optional parameters
+cut=perl $PIPE_PATH/read_cutadapter.pl 15
+# necessary parameters
+ bwa=/usr/local/bin/bwa aln /soft/Index/hg19/hg19.fa
+ reference=/soft/Index/hg19/hg19.fa
+samtools=$FP/bin/samtools
+R=/usr/bin/R
+cytoBand=$PIPE_PATH/hg19_cytoBand.txt
+extract=perl $PIPE_PATH/ext.pl
+tags=perl $PIPE_PATH/tags_gc_gender_info.pl
+seg=perl $PIPE_PATH/segmentation.pl
+drawcnv=perl $PIPE_PATH/CNV_drawer.pl
+boxplot=perl $PIPE_PATH/boxplot.pl
+karyomap=perl $PIPE_PATH/CNVDrawer.pl -lt 5000000
+# QCsummary=perl $PIPE_PATH/zhangcl/bin/CASS/QCsummary.pl
+windows=$PIPE_PATH/Windows/windows_hg19_bwa.aln_500k_slide100k.txt.gz
+n_region=$PIPE_PATH/N_region_hg19
